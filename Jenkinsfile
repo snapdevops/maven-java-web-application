@@ -1,5 +1,7 @@
 pipeline {
-    agent none
+    agent {
+        def commitHash = checkout(scm).GIT_COMMIT
+    }
     stages {
         stage('Build') {
             agent any
