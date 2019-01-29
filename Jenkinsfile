@@ -1,11 +1,16 @@
-node {
-	stage (‘checkout’ {
-		checkout scm
-	   }
-	stage (‘DevlopmentBuild’) {
-	   steps {
-                echo 'Building..'
+pipeline {
+    agent none
+    stages {
+        stage('Build') {
+            agent any
+            steps {
+                checkout scm
                 sh "mvn clean install"
-            }
-       }
-	}
+             }
+        }
+
+        }
+    }
+}
+
+
