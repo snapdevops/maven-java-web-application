@@ -1,13 +1,9 @@
 pipeline {
     agent any
-      try {
-    stage('Checkout') {
-      checkout scm
-    }
-
     stages {
         stage('Devlopment Build') {
             steps {
+                checkout scm
                 echo 'Building..'
                 sh "mvn clean install"
             }
