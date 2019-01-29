@@ -12,8 +12,8 @@ node {
   sh "mvn clean install"
   // Now we have a step to decide if we should publish to production 
   // (we just use a simple publish step here)
-  input 'Publish?'
-  stage 'Publish'
+  //input 'Publish?'
+  //stage 'Publish'
   // push the tags (alternatively we could have pushed them to a separate
   // git repo that we then pull from and repush... the latter can be 
   // helpful in the case where you run the publish on a different node
