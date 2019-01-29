@@ -1,6 +1,9 @@
-node {
-    checkout scm
+pipeline
+{
     stages {
+       node {
+             checkout scm
+              }
         stage('Devlopment Build') {
             steps {
                 echo 'Building..'
