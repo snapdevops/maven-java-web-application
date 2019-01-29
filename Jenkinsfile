@@ -13,10 +13,5 @@ pipeline {
                 sh "dokcer build -f Dockerfile"
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
     }
 }
