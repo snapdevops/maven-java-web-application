@@ -1,11 +1,5 @@
-pipeline {
-    agent any
-    node {
+node {
     checkout scm
-    
-    //Build, Test, Stage, Deploy
-    [...]
-   }
     stages {
         stage('Devlopment Build') {
             steps {
