@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "dokcer build -f Dockerfile"
+                sh "docker build -f Dockerfile -t"
             }
         }
     }
