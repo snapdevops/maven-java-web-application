@@ -1,9 +1,14 @@
 pipeline {
     agent any
+    node {
+    checkout scm
+    
+    //Build, Test, Stage, Deploy
+    [...]
+   }
     stages {
         stage('Devlopment Build') {
             steps {
-                checkout scm
                 echo 'Building..'
                 sh "mvn clean install"
             }
